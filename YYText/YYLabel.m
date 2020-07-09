@@ -1303,4 +1303,11 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
     }
 }
 
+#pragma mark - Dark Mode
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    [self.layer setNeedsDisplay];
+}
+
 @end
